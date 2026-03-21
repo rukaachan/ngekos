@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Transaction extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = [
         "code",
@@ -15,7 +16,7 @@ class Transaction extends Model
         "room_id",
         "name",
         "email",
-        "phone",
+        "phone_number",
         "payment_method",
         "payment_status",
         "start_date",
